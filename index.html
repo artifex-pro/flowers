@@ -4,21 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" type="text/javascript"></script><title>Flowers</title>
+    <script src="main.js" type="text/javascript"></script><title>For Bao Châu</title>
 </head>
-    
+
 <body class="not-loaded">
+    <div class="greeting">
+      <h1 class="greeting__name">For Bao Châu</h1>
+      <p class="greeting__msg">Some digital flowers for you, since we are far apart. <br class="brk">May they keep blooming until I can hand you the real ones.</p>
+    </div>
     <div class="night"></div>
     <div class="flowers">
+
+      <svg class="rose-defs" width="0" height="0" aria-hidden="true">
+        <defs>
+          <radialGradient id="discG" cx="50%" cy="50%" r="58%">
+            <stop offset="0%" stop-color="#6e0a1c"/>
+            <stop offset="70%" stop-color="#a5122a"/>
+            <stop offset="100%" stop-color="#b8132a"/>
+          </radialGradient>
+          <linearGradient id="pOuter" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ff9a93"/>
+            <stop offset="46%" stop-color="#df2538"/>
+            <stop offset="100%" stop-color="#8a0c20"/>
+          </linearGradient>
+          <linearGradient id="pMid" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f3656a"/>
+            <stop offset="50%" stop-color="#bf142b"/>
+            <stop offset="100%" stop-color="#5e0818"/>
+          </linearGradient>
+          <linearGradient id="pInner" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#cb2435"/>
+            <stop offset="55%" stop-color="#8a0c20"/>
+            <stop offset="100%" stop-color="#420510"/>
+          </linearGradient>
+          <radialGradient id="discRd" cx="50%" cy="50%" r="58%">
+            <stop offset="0%" stop-color="#7a0612"/><stop offset="70%" stop-color="#a50f1c"/><stop offset="100%" stop-color="#c2121f"/>
+          </radialGradient>
+          <linearGradient id="oRd" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff7163"/><stop offset="46%" stop-color="#d6121d"/><stop offset="100%" stop-color="#7a0610"/></linearGradient>
+          <linearGradient id="mRd" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ef4a44"/><stop offset="50%" stop-color="#b80f1a"/><stop offset="100%" stop-color="#54060c"/></linearGradient>
+          <linearGradient id="iRd" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c81d22"/><stop offset="55%" stop-color="#800a14"/><stop offset="100%" stop-color="#3c050a"/></linearGradient>
+          <radialGradient id="discPk" cx="50%" cy="50%" r="58%">
+            <stop offset="0%" stop-color="#c23a78"/><stop offset="70%" stop-color="#d44d8f"/><stop offset="100%" stop-color="#e060a0"/>
+          </radialGradient>
+          <linearGradient id="oPk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffd0e2"/><stop offset="46%" stop-color="#f06baa"/><stop offset="100%" stop-color="#c01f6a"/></linearGradient>
+          <linearGradient id="mPk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff9cc6"/><stop offset="50%" stop-color="#e04b92"/><stop offset="100%" stop-color="#9c1456"/></linearGradient>
+          <linearGradient id="iPk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f06aa6"/><stop offset="55%" stop-color="#c01f6a"/><stop offset="100%" stop-color="#74103f"/></linearGradient>
+        </defs>
+      </svg>
+
+      <div class="basket-handle grow-ans" style="--d:0.3s"></div>
+
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
-          <div class="flower__leaf flower__leaf--1"></div>
-          <div class="flower__leaf flower__leaf--2"></div>
-          <div class="flower__leaf flower__leaf--3"></div>
-          <div class="flower__leaf flower__leaf--4"></div>
-          <div class="flower__white-circle"></div>
-  
+          <div class="rose">
+            <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discRd)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+          </div>
+
           <div class="flower__light flower__light--1"></div>
           <div class="flower__light flower__light--2"></div>
           <div class="flower__light flower__light--3"></div>
@@ -27,7 +106,6 @@
           <div class="flower__light flower__light--6"></div>
           <div class="flower__light flower__light--7"></div>
           <div class="flower__light flower__light--8"></div>
-  
         </div>
         <div class="flower__line">
           <div class="flower__line__leaf flower__line__leaf--1"></div>
@@ -38,15 +116,47 @@
           <div class="flower__line__leaf flower__line__leaf--6"></div>
         </div>
       </div>
-  
+
       <div class="flower flower--2">
         <div class="flower__leafs flower__leafs--2">
-          <div class="flower__leaf flower__leaf--1"></div>
-          <div class="flower__leaf flower__leaf--2"></div>
-          <div class="flower__leaf flower__leaf--3"></div>
-          <div class="flower__leaf flower__leaf--4"></div>
-          <div class="flower__white-circle"></div>
-  
+          <div class="rose">
+            <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discPk)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+          </div>
+
           <div class="flower__light flower__light--1"></div>
           <div class="flower__light flower__light--2"></div>
           <div class="flower__light flower__light--3"></div>
@@ -55,7 +165,6 @@
           <div class="flower__light flower__light--6"></div>
           <div class="flower__light flower__light--7"></div>
           <div class="flower__light flower__light--8"></div>
-  
         </div>
         <div class="flower__line">
           <div class="flower__line__leaf flower__line__leaf--1"></div>
@@ -64,15 +173,47 @@
           <div class="flower__line__leaf flower__line__leaf--4"></div>
         </div>
       </div>
-  
+
       <div class="flower flower--3">
         <div class="flower__leafs flower__leafs--3">
-          <div class="flower__leaf flower__leaf--1"></div>
-          <div class="flower__leaf flower__leaf--2"></div>
-          <div class="flower__leaf flower__leaf--3"></div>
-          <div class="flower__leaf flower__leaf--4"></div>
-          <div class="flower__white-circle"></div>
-  
+          <div class="rose">
+            <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discRd)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+          </div>
+
           <div class="flower__light flower__light--1"></div>
           <div class="flower__light flower__light--2"></div>
           <div class="flower__light flower__light--3"></div>
@@ -81,7 +222,6 @@
           <div class="flower__light flower__light--6"></div>
           <div class="flower__light flower__light--7"></div>
           <div class="flower__light flower__light--8"></div>
-  
         </div>
         <div class="flower__line">
           <div class="flower__line__leaf flower__line__leaf--1"></div>
@@ -90,14 +230,508 @@
           <div class="flower__line__leaf flower__line__leaf--4"></div>
         </div>
       </div>
-  
+
+
+      <div class="flower flower--4">
+        <div class="flower__leafs flower__leafs--4">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discPk)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--5">
+        <div class="flower__leafs flower__leafs--5">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discG)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--6">
+        <div class="flower__leafs flower__leafs--6">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discPk)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--7">
+        <div class="flower__leafs flower__leafs--7">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discRd)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--8">
+        <div class="flower__leafs flower__leafs--8">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discPk)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--9">
+        <div class="flower__leafs flower__leafs--9">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discRd)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--10">
+        <div class="flower__leafs flower__leafs--10">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discG)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+
+      <div class="flower flower--11">
+        <div class="flower__leafs flower__leafs--11">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discPk)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--12">
+        <div class="flower__leafs flower__leafs--12">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discRd)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--13">
+        <div class="flower__leafs flower__leafs--13">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discPk)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mPk)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iPk)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--14">
+        <div class="flower__leafs flower__leafs--14">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discRd)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#oRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#mRd)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#iRd)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
+      <div class="flower flower--15">
+        <div class="flower__leafs flower__leafs--15">
+          <svg class="rose__svg" viewBox="0 0 120 120">
+              <g class="rose__bloom">
+                <!-- filled bloom base so no gaps show -->
+                <circle cx="60" cy="60" r="33" fill="url(#discG)"/>
+                <!-- outer petal ring (8) -->
+                <g transform="rotate(0 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(45 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(135 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(180 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(225 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(270 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <g transform="rotate(315 60 60)"><ellipse cx="60" cy="41" rx="12.5" ry="20" fill="url(#pOuter)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.28"/></g>
+                <!-- mid petal ring (7, offset) -->
+                <g transform="rotate(25 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(76 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(128 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(179 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(231 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(282 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <g transform="rotate(333 60 60)"><ellipse cx="60" cy="47" rx="10" ry="15.5" fill="url(#pMid)" stroke="#3a0510" stroke-width="0.6" stroke-opacity="0.35"/></g>
+                <!-- inner petal ring (5) -->
+                <g transform="rotate(18 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(90 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(162 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(234 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <g transform="rotate(306 60 60)"><ellipse cx="60" cy="52" rx="7.5" ry="11.5" fill="url(#pInner)"/></g>
+                <!-- spiral coil center -->
+                <g fill="none" stroke="#410510" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M60,67 A7,7 0 1 1 67,60"/>
+                  <path d="M67,60 A5,5 0 1 0 56.5,59.5"/>
+                </g>
+                <circle cx="60.5" cy="60.5" r="2.2" fill="#280308"/>
+              </g>
+            </svg>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+
       <div class="grow-ans" style="--d:1.2s">
         <div class="flower__g-long">
           <div class="flower__g-long__top"></div>
           <div class="flower__g-long__bottom"></div>
         </div>
       </div>
-  
+
       <div class="growing-grass">
         <div class="flower__grass flower__grass--1">
           <div class="flower__grass--top"></div>
@@ -113,7 +747,7 @@
           <div class="flower__grass__overlay"></div>
         </div>
       </div>
-  
+
       <div class="growing-grass">
         <div class="flower__grass flower__grass--2">
           <div class="flower__grass--top"></div>
@@ -129,19 +763,19 @@
           <div class="flower__grass__overlay"></div>
         </div>
       </div>
-  
+
       <div class="grow-ans" style="--d:2.4s">
         <div class="flower__g-right flower__g-right--1">
           <div class="leaf"></div>
         </div>
       </div>
-  
+
       <div class="grow-ans" style="--d:2.8s">
         <div class="flower__g-right flower__g-right--2">
           <div class="leaf"></div>
         </div>
       </div>
-  
+
       <div class="grow-ans" style="--d:2.8s">
         <div class="flower__g-front">
           <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
@@ -171,7 +805,7 @@
           <div class="flower__g-front__line"></div>
         </div>
       </div>
-  
+
       <div class="grow-ans" style="--d:3.2s">
         <div class="flower__g-fr">
           <div class="leaf"></div>
@@ -185,7 +819,7 @@
           <div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
         </div>
       </div>
-  
+
       <div class="long-g long-g--0">
         <div class="grow-ans" style="--d:3s">
           <div class="leaf leaf--0"></div>
@@ -200,7 +834,7 @@
           <div class="leaf leaf--3"></div>
         </div>
       </div>
-  
+
       <div class="long-g long-g--1">
         <div class="grow-ans" style="--d:3.6s">
           <div class="leaf leaf--0"></div>
@@ -215,52 +849,7 @@
           <div class="leaf leaf--3"></div>
         </div>
       </div>
-  
-      <div class="long-g long-g--2">
-        <div class="grow-ans" style="--d:4s">
-          <div class="leaf leaf--0"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.2s">
-          <div class="leaf leaf--1"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.4s">
-          <div class="leaf leaf--2"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.6s">
-          <div class="leaf leaf--3"></div>
-        </div>
-      </div>
-  
-      <div class="long-g long-g--3">
-        <div class="grow-ans" style="--d:4s">
-          <div class="leaf leaf--0"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.2s">
-          <div class="leaf leaf--1"></div>
-        </div>
-        <div class="grow-ans" style="--d:3s">
-          <div class="leaf leaf--2"></div>
-        </div>
-        <div class="grow-ans" style="--d:3.6s">
-          <div class="leaf leaf--3"></div>
-        </div>
-      </div>
-  
-      <div class="long-g long-g--4">
-        <div class="grow-ans" style="--d:4s">
-          <div class="leaf leaf--0"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.2s">
-          <div class="leaf leaf--1"></div>
-        </div>
-        <div class="grow-ans" style="--d:3s">
-          <div class="leaf leaf--2"></div>
-        </div>
-        <div class="grow-ans" style="--d:3.6s">
-          <div class="leaf leaf--3"></div>
-        </div>
-      </div>
-  
+
       <div class="long-g long-g--5">
         <div class="grow-ans" style="--d:4s">
           <div class="leaf leaf--0"></div>
@@ -275,36 +864,14 @@
           <div class="leaf leaf--3"></div>
         </div>
       </div>
-  
-      <div class="long-g long-g--6">
-        <div class="grow-ans" style="--d:4.2s">
-          <div class="leaf leaf--0"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.4s">
-          <div class="leaf leaf--1"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.6s">
-          <div class="leaf leaf--2"></div>
-        </div>
-        <div class="grow-ans" style="--d:4.8s">
-          <div class="leaf leaf--3"></div>
+
+      <div class="basket grow-ans" style="--d:0.3s">
+        <div class="basket__body">
+          <div class="basket__rim"></div>
+          <div class="basket__weave"></div>
         </div>
       </div>
-  
-      <div class="long-g long-g--7">
-        <div class="grow-ans" style="--d:3s">
-          <div class="leaf leaf--0"></div>
-        </div>
-        <div class="grow-ans" style="--d:3.2s">
-          <div class="leaf leaf--1"></div>
-        </div>
-        <div class="grow-ans" style="--d:3.5s">
-          <div class="leaf leaf--2"></div>
-        </div>
-        <div class="grow-ans" style="--d:3.6s">
-          <div class="leaf leaf--3"></div>
-        </div>
-      </div>
+
     </div>
 </body>
 </html>

@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "sass:map";
+
 *,
 *::after,
 *::before {
@@ -7,7 +10,7 @@
 }
 
 :root {
-  --dark-color: #000;
+  --dark-color: #140a14;
 }
 
 body {
@@ -15,7 +18,13 @@ body {
   align-items: flex-end;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--dark-color);
+  background-color: #0a0410;
+  background-image: radial-gradient(
+    ellipse at 50% 90%,
+    #3a0f2a 0%,
+    #1a0818 45%,
+    #0a0410 80%
+  );
   overflow: hidden;
   perspective: 1000px;
   padding: 50px 0px;
@@ -33,7 +42,21 @@ body {
 
 .flowers {
   position: relative;
-  transform: scale(0.9);
+  transform: scale(0.88);
+  transform-origin: bottom center;
+}
+
+// slightly smaller on larger screens so the whole bouquet stays in view
+@media (min-width: 760px) {
+  .flowers {
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 1200px) {
+  .flowers {
+    transform: scale(0.74);
+  }
 }
 
 .flower {
@@ -156,7 +179,7 @@ body {
       transform: translate(-50%, -100%);
       width: 8vmin;
       height: 8vmin;
-      background-color: #6bf0ff;
+      background-color: #ff8fc0;
       filter: blur(10vmin);
     }
   }
@@ -168,8 +191,8 @@ body {
     width: 8vmin;
     height: 11vmin;
     border-radius: 51% 49% 47% 53% / 44% 45% 55% 69%;
-    background-color: #a7ffee;
-    background-image: linear-gradient(to top, #54b8aa, #a7ffee);
+    background-color: #a7e8bf;
+    background-image: linear-gradient(to top, #3f9d6a, #a7e8bf);
     transform-origin: bottom center;
     opacity: 0.9;
     box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -192,7 +215,7 @@ body {
       transform-origin: bottom left;
       border-radius: 4vmin 10vmin 4vmin 4vmin;
       transform: translate(-0%, 18%) rotateX(70deg) rotate(-43deg);
-      background-image: linear-gradient(to top, #39c6d6, #a7ffee);
+      background-image: linear-gradient(to top, #2f9e54, #a7e8bf);
       z-index: 1;
       opacity: 0.8;
     }
@@ -205,7 +228,7 @@ body {
     width: 9vmin;
     height: 4vmin;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #ffe3f0;
 
     &::after {
       content: "";
@@ -321,7 +344,16 @@ body {
           transparent 1px,
           transparent 12px
         ),
-        linear-gradient(90deg, rgb(255, 235, 18), rgb(255, 206, 0));
+        conic-gradient(
+          from 90deg,
+          #2f9e54,
+          #ff6fae,
+          #c2185b,
+          #ff8fc0,
+          #2f9e54
+        );
+      border-radius: 50%;
+      box-shadow: inset 0 0 1.5vmin rgba(120, 10, 60, 0.6);
     }
   }
 
@@ -334,7 +366,7 @@ body {
         transparent,
         rgba(255, 255, 255, 0.2)
       ),
-      linear-gradient(to top, transparent 10%, #14757a, #39c6d6);
+      linear-gradient(to top, transparent 10%, #176c38, #2f9e54);
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
     animation: grow-flower-tree 4s backwards;
 
@@ -351,7 +383,7 @@ body {
       background-image: linear-gradient(
         to top,
         rgba(20, 117, 122, 0.4),
-        #39c6d6
+        #2f9e54
       );
 
       &--1 {
@@ -405,7 +437,7 @@ body {
     animation: light-ans 4s linear infinite backwards;
 
     &:nth-child(odd) {
-      background-color: #23f0ff;
+      background-color: #56b87e;
     }
 
     &--1 {
@@ -450,7 +482,7 @@ body {
   }
 
   &__grass {
-    --c: #159faa;
+    --c: #2e8b57;
     --line-w: 1.5vmin;
 
     position: absolute;
@@ -637,7 +669,7 @@ body {
   &__g-long {
     --w: 2vmin;
     --h: 6vmin;
-    --c: #159faa;
+    --c: #2e8b57;
     position: absolute;
     bottom: 10vmin;
     left: -3vmin;
@@ -689,13 +721,13 @@ body {
       width: 30vmin;
       height: 50vmin;
       border-top-left-radius: 100%;
-      border-left: 2vmin solid #079097;
+      border-left: 2vmin solid #1e6b3a;
       background-image: linear-gradient(
         to bottom,
         transparent,
         var(--dark-color) 60%
       );
-      -webkit-mask-image: linear-gradient(to top, transparent 30%, #079097 60%);
+      -webkit-mask-image: linear-gradient(to top, transparent 30%, #1e6b3a 60%);
     }
 
     &--1 {
@@ -762,7 +794,7 @@ body {
       background-image: linear-gradient(
         to top,
         transparent,
-        #079097,
+        #1e6b3a,
         transparent 100%
       );
       position: relative;
@@ -865,7 +897,7 @@ body {
       width: 10vmin;
       height: 10vmin;
       border-radius: 100% 0% 0% 100% / 100% 100% 0% 0%;
-      box-shadow: inset 0 2px 1vmin hsla(184, 97%, 58%, 0.2);
+      box-shadow: inset 0 2px 1vmin rgba(255, 140, 190, 0.25);
       background-image: linear-gradient(
           to bottom left,
           transparent,
@@ -873,20 +905,20 @@ body {
         ),
         linear-gradient(
           to bottom right,
-          #159faa 50%,
+          #2e8b57 50%,
           transparent 50%,
           transparent
         );
 
       -webkit-mask-image: linear-gradient(
         to bottom right,
-        #159faa 50%,
+        #2e8b57 50%,
         transparent 50%,
         transparent
       );
       mask-image: linear-gradient(
         to bottom right,
-        #159faa 50%,
+        #2e8b57 50%,
         transparent 50%,
         transparent
       );
@@ -916,8 +948,8 @@ body {
       width: 30vmin;
       height: 50vmin;
       border-top-left-radius: 100%;
-      border-left: 2vmin solid #079097;
-      -webkit-mask-image: linear-gradient(to top, transparent 25%, #079097 50%);
+      border-left: 2vmin solid #1e6b3a;
+      -webkit-mask-image: linear-gradient(to top, transparent 25%, #1e6b3a 50%);
       position: relative;
       z-index: 1;
     }
@@ -929,7 +961,7 @@ body {
       width: 10vmin;
       height: 10vmin;
       border-radius: 100% 0% 0% 100% / 100% 100% 0% 0%;
-      box-shadow: inset 0 2px 1vmin hsla(184, 97%, 58%, 0.2);
+      box-shadow: inset 0 2px 1vmin rgba(255, 140, 190, 0.25);
       background-image: linear-gradient(
           to bottom left,
           transparent,
@@ -937,14 +969,14 @@ body {
         ),
         linear-gradient(
           to bottom right,
-          #23f0ff 45%,
+          #56b87e 45%,
           transparent 50%,
           transparent
         );
 
       -webkit-mask-image: linear-gradient(
         135deg,
-        #159faa 40%,
+        #2e8b57 40%,
         transparent 50%,
         transparent
       );
@@ -1057,7 +1089,7 @@ body {
       -webkit-mask-image: linear-gradient(
         to top,
         transparent 40%,
-        #079097 80%
+        #1e6b3a 80%
       ) !important;
 
       &--1 {
@@ -1080,7 +1112,7 @@ body {
       -webkit-mask-image: linear-gradient(
         to top,
         transparent 50%,
-        #079097 80%
+        #1e6b3a 80%
       ) !important;
 
       &--1 {
@@ -1097,7 +1129,7 @@ body {
       -webkit-mask-image: linear-gradient(
         to top,
         transparent 40%,
-        #079097 80%
+        #1e6b3a 80%
       ) !important;
     }
   }
@@ -1112,7 +1144,7 @@ body {
       -webkit-mask-image: linear-gradient(
         to top,
         transparent 50%,
-        #079097 80%
+        #1e6b3a 80%
       ) !important;
     }
   }
@@ -1143,7 +1175,7 @@ body {
   .leaf {
     --w: 15vmin;
     --h: 40vmin;
-    --c: #1aaa15;
+    --c: #2e8b57;
 
     position: absolute;
     bottom: 0;
@@ -1354,6 +1386,298 @@ body {
 @keyframes growing-grass-ans {
   0% {
     transform: scale(0);
+  }
+}
+
+// ---- extra roses (4..10) fanning from the basket ----
+$roses: (
+  4: (rot: -34deg, h: 50, sc: 0.9, sd: 0.7s, ld: 1.9s),
+  5: (rot: 34deg, h: 52, sc: 0.9, sd: 0.8s, ld: 2s),
+  6: (rot: -50deg, h: 40, sc: 0.74, sd: 0.5s, ld: 1.7s),
+  7: (rot: 50deg, h: 42, sc: 0.74, sd: 0.6s, ld: 1.75s),
+  8: (rot: 12deg, h: 64, sc: 0.94, sd: 1s, ld: 2.2s),
+  9: (rot: -20deg, h: 58, sc: 0.9, sd: 0.9s, ld: 2.1s),
+  10: (rot: 27deg, h: 60, sc: 0.88, sd: 0.95s, ld: 2.15s),
+);
+@each $n, $p in $roses {
+  .flower--#{$n} {
+    left: 50%;
+    transform: rotate(map.get($p, rot)) scale(map.get($p, sc));
+    z-index: 9;
+    .flower__line {
+      height: #{map.get($p, h)}vmin;
+      animation-delay: map.get($p, sd);
+    }
+    .flower__leafs {
+      animation-delay: map.get($p, ld);
+    }
+  }
+}
+
+// ---- greeting / love note ----
+.greeting {
+  position: fixed;
+  top: 4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 760px;
+  text-align: center;
+  z-index: 500;
+  pointer-events: none;
+  animation: greet-in 2.2s 1.3s ease backwards;
+
+  &__name {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: clamp(2.6rem, 8vmin, 5.4rem);
+    line-height: 1.05;
+    color: #ffdce8;
+    text-shadow: 0 0 14px rgba(255, 120, 170, 0.55),
+      0 0 30px rgba(224, 33, 90, 0.35), 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  &__msg {
+    margin: 1.2vmin auto 0;
+    max-width: 36em;
+    padding: 0 0.5rem;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(0.95rem, 2.3vmin, 1.45rem);
+    letter-spacing: 0.015em;
+    color: rgba(255, 226, 236, 0.88);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  }
+}
+
+// mobile: let the note wrap, keep the bouquet clearly below the title
+@media (max-width: 600px) {
+  .greeting {
+    top: 2.4vh;
+    width: 100%;
+    padding: 0 22px;
+    box-sizing: border-box;
+
+    &__name {
+      font-size: 2.6rem;
+    }
+    &__msg {
+      width: min(84vw, 340px);
+      max-width: 340px;
+      margin-inline: auto;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      overflow-wrap: break-word;
+    }
+    .brk {
+      display: none;
+    }
+  }
+
+  .flowers {
+    transform: scale(0.82);
+    transform-origin: bottom center;
+  }
+
+  body {
+    align-items: flex-end;
+    padding-bottom: 2vh;
+  }
+}
+
+@keyframes greet-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-1.6vmin);
+  }
+}
+
+// ---- small filler roses (11..15) nestled in the middle ----
+$small-roses: (
+  11: (rot: -14deg, h: 44, sc: 0.72, sd: 1.1s, ld: 2.3s),
+  12: (rot: 18deg, h: 40, sc: 0.68, sd: 1.2s, ld: 2.35s),
+  13: (rot: -3deg, h: 48, sc: 0.74, sd: 1s, ld: 2.25s),
+  14: (rot: 10deg, h: 37, sc: 0.66, sd: 1.3s, ld: 2.4s),
+  15: (rot: -24deg, h: 42, sc: 0.7, sd: 1.15s, ld: 2.32s),
+);
+@each $n, $p in $small-roses {
+  .flower--#{$n} {
+    left: 50%;
+    transform: rotate(map.get($p, rot)) scale(map.get($p, sc));
+    z-index: 150; // in front of the big roses + foliage
+    .flower__line {
+      height: #{map.get($p, h)}vmin;
+      animation-delay: map.get($p, sd);
+    }
+    .flower__leafs {
+      animation-delay: map.get($p, ld);
+    }
+  }
+}
+
+// ---- Flower basket ----
+// handle sits BEHIND the whole bouquet (low z, separate element)
+.basket-handle {
+  --basket-dark: #5e2f12;
+  --basket-mid: #a85a25;
+  --basket-light: #d39248;
+  position: absolute;
+  left: 50%;
+  bottom: 16vmin; // base at rim; lower part hidden behind basket body
+  transform: translateX(-50%);
+  width: 20vmin;
+  height: 13vmin;
+  border: 1.6vmin solid var(--basket-mid);
+  border-bottom: none;
+  border-radius: 10vmin 10vmin 0 0 / 13vmin 13vmin 0 0; // small rounded arch
+  background: transparent;
+  z-index: 1; // behind flowers (flower z-index: 10)
+  box-shadow: inset 0 0 0.8vmin rgba(0, 0, 0, 0.45),
+    0 0 0.4vmin rgba(0, 0, 0, 0.3);
+  border-image: linear-gradient(
+      to top,
+      var(--basket-light),
+      var(--basket-mid) 50%,
+      var(--basket-dark)
+    )
+    1;
+}
+
+.basket {
+  position: absolute;
+  left: 50%;
+  bottom: -2vmin;
+  transform: translateX(-50%);
+  z-index: 200; // body must cover foliage (grass leaf z-index: 100)
+
+  --basket-dark: #5e2f12;
+  --basket-mid: #a85a25;
+  --basket-light: #d39248;
+
+  &__body {
+    position: relative;
+    width: 42vmin;
+    height: 21vmin;
+    z-index: 55; // in front of stem bases
+    clip-path: polygon(7% 0, 93% 0, 80% 100%, 20% 100%);
+    background-color: var(--basket-mid);
+    // horizontal woven rows + vertical slat shadows
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.32) 0,
+        rgba(0, 0, 0, 0.32) 0.35vmin,
+        transparent 0.35vmin,
+        transparent 3.4vmin
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.14) 1.7vmin,
+        rgba(255, 255, 255, 0.14) 2.1vmin,
+        transparent 2.1vmin,
+        transparent 3.4vmin
+      ),
+      repeating-linear-gradient(
+        0deg,
+        var(--basket-dark) 0,
+        var(--basket-dark) 0.5vmin,
+        var(--basket-mid) 0.5vmin,
+        var(--basket-light) 2vmin,
+        var(--basket-mid) 3.4vmin,
+        var(--basket-dark) 3.9vmin
+      );
+    box-shadow: inset 0 -2vmin 3vmin rgba(0, 0, 0, 0.45);
+  }
+
+  &__rim {
+    position: absolute;
+    left: 50%;
+    top: -2.4vmin;
+    transform: translateX(-50%);
+    width: 46vmin;
+    height: 5.2vmin;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      to bottom,
+      var(--basket-light),
+      var(--basket-mid) 45%,
+      var(--basket-dark)
+    );
+    box-shadow: inset 0 0.4vmin 0.8vmin rgba(255, 255, 255, 0.25),
+      inset 0 -0.6vmin 1vmin rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    // braided rim texture
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 1vmin 1.2vmin;
+      border-radius: 50%;
+      background-image: repeating-linear-gradient(
+        62deg,
+        var(--basket-dark) 0,
+        var(--basket-dark) 0.6vmin,
+        var(--basket-light) 0.6vmin,
+        var(--basket-light) 1.6vmin
+      );
+      opacity: 0.55;
+    }
+  }
+
+  &__weave {
+    position: absolute;
+    inset: 0;
+    clip-path: inherit;
+    // subtle diagonal cross-weave overlay
+    background-image: repeating-linear-gradient(
+        38deg,
+        rgba(0, 0, 0, 0.12) 0,
+        rgba(0, 0, 0, 0.12) 0.5vmin,
+        transparent 0.5vmin,
+        transparent 2.6vmin
+      ),
+      repeating-linear-gradient(
+        -38deg,
+        rgba(0, 0, 0, 0.12) 0,
+        rgba(0, 0, 0, 0.12) 0.5vmin,
+        transparent 0.5vmin,
+        transparent 2.6vmin
+      );
+  }
+}
+
+// ---- Rose bloom (SVG layered petals) ----
+.rose {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  animation: rose-breathe 5.5s ease-in-out infinite;
+}
+
+.rose__svg {
+  position: absolute;
+  width: 34vmin;
+  height: 34vmin;
+  left: -17vmin;
+  bottom: -15vmin;
+  overflow: visible;
+  transform-origin: center;
+  filter: drop-shadow(0 1vmin 1.6vmin rgba(20, 0, 8, 0.45));
+}
+
+.rose__bloom {
+  transform-origin: 60px 60px;
+}
+
+@keyframes rose-breathe {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.04) rotate(1.5deg);
   }
 }
 
