@@ -1391,13 +1391,13 @@ body {
 
 // ---- extra roses (4..10) fanning from the basket ----
 $roses: (
-  4: (rot: -24deg, h: 52, sc: 0.9, sd: 0.7s, ld: 1.9s),
-  5: (rot: 26deg, h: 52, sc: 0.9, sd: 0.8s, ld: 2s),
-  6: (rot: -18deg, h: 46, sc: 0.74, sd: 0.5s, ld: 1.7s),
-  7: (rot: 34deg, h: 44, sc: 0.74, sd: 0.6s, ld: 1.75s),
-  8: (rot: 12deg, h: 64, sc: 0.94, sd: 1s, ld: 2.2s),
-  9: (rot: -20deg, h: 58, sc: 0.9, sd: 0.9s, ld: 2.1s),
-  10: (rot: 27deg, h: 60, sc: 0.88, sd: 0.95s, ld: 2.15s),
+  4: (rot: -34deg, h: 52, sc: 0.9, sd: 0.7s, ld: 1.9s),
+  5: (rot: 36deg, h: 52, sc: 0.9, sd: 0.8s, ld: 2s),
+  6: (rot: -25deg, h: 46, sc: 0.74, sd: 0.5s, ld: 1.7s),
+  7: (rot: 48deg, h: 44, sc: 0.74, sd: 0.6s, ld: 1.75s),
+  8: (rot: 17deg, h: 64, sc: 0.94, sd: 1s, ld: 2.2s),
+  9: (rot: -28deg, h: 58, sc: 0.9, sd: 0.9s, ld: 2.1s),
+  10: (rot: 38deg, h: 60, sc: 0.88, sd: 0.95s, ld: 2.15s),
 );
 @each $n, $p in $roses {
   .flower--#{$n} {
@@ -1503,10 +1503,10 @@ $roses: (
 
 // ---- top-left + central-gap fill (21..23) ----
 $fill-roses: (
-  21: (rot: -30deg, h: 86, sc: 0.84, sd: 0.95s, ld: 2.1s, z: 110),
-  22: (rot: -16deg, h: 55, sc: 0.62, sd: 1.05s, ld: 2.32s, z: 130),
-  23: (rot: 5deg, h: 50, sc: 0.58, sd: 1.1s, ld: 2.36s, z: 135),
-  24: (rot: -21deg, h: 78, sc: 0.8, sd: 1s, ld: 2.15s, z: 110),
+  21: (rot: -42deg, h: 86, sc: 0.84, sd: 0.95s, ld: 2.1s, z: 110),
+  22: (rot: -22deg, h: 55, sc: 0.62, sd: 1.05s, ld: 2.32s, z: 130),
+  23: (rot: 7deg, h: 50, sc: 0.58, sd: 1.1s, ld: 2.36s, z: 135),
+  24: (rot: -29deg, h: 78, sc: 0.8, sd: 1s, ld: 2.15s, z: 110),
 );
 @each $n, $p in $fill-roses {
   .flower--#{$n} {
@@ -1525,11 +1525,11 @@ $fill-roses: (
 
 // ---- extra fill roses (16..20), mostly pink ----
 $more-roses: (
-  16: (rot: -21deg, h: 56, sc: 0.8, sd: 0.85s, ld: 2.05s, z: 110),
-  17: (rot: 31deg, h: 54, sc: 0.76, sd: 0.9s, ld: 2.1s, z: 110),
-  18: (rot: 6deg, h: 69, sc: 0.82, sd: 1s, ld: 2.15s, z: 110),
-  19: (rot: -8deg, h: 46, sc: 0.6, sd: 1.05s, ld: 2.3s, z: 140),
-  20: (rot: 22deg, h: 50, sc: 0.66, sd: 1.1s, ld: 2.28s, z: 140),
+  16: (rot: -29deg, h: 56, sc: 0.8, sd: 0.85s, ld: 2.05s, z: 110),
+  17: (rot: 43deg, h: 54, sc: 0.76, sd: 0.9s, ld: 2.1s, z: 110),
+  18: (rot: 8deg, h: 69, sc: 0.82, sd: 1s, ld: 2.15s, z: 110),
+  19: (rot: -11deg, h: 46, sc: 0.6, sd: 1.05s, ld: 2.3s, z: 140),
+  20: (rot: 31deg, h: 50, sc: 0.66, sd: 1.1s, ld: 2.28s, z: 140),
 );
 @each $n, $p in $more-roses {
   .flower--#{$n} {
@@ -1548,11 +1548,11 @@ $more-roses: (
 
 // ---- small filler roses (11..15) nestled in the middle ----
 $small-roses: (
-  11: (rot: -14deg, h: 44, sc: 0.72, sd: 1.1s, ld: 2.3s),
-  12: (rot: 18deg, h: 40, sc: 0.68, sd: 1.2s, ld: 2.35s),
-  13: (rot: -3deg, h: 48, sc: 0.74, sd: 1s, ld: 2.25s),
-  14: (rot: 10deg, h: 37, sc: 0.66, sd: 1.3s, ld: 2.4s),
-  15: (rot: -24deg, h: 42, sc: 0.7, sd: 1.15s, ld: 2.32s),
+  11: (rot: -20deg, h: 44, sc: 0.72, sd: 1.1s, ld: 2.3s),
+  12: (rot: 25deg, h: 40, sc: 0.68, sd: 1.2s, ld: 2.35s),
+  13: (rot: -4deg, h: 48, sc: 0.74, sd: 1s, ld: 2.25s),
+  14: (rot: 14deg, h: 37, sc: 0.66, sd: 1.3s, ld: 2.4s),
+  15: (rot: -34deg, h: 42, sc: 0.7, sd: 1.15s, ld: 2.32s),
 );
 @each $n, $p in $small-roses {
   .flower--#{$n} {
