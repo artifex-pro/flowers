@@ -1475,8 +1475,9 @@ $roses: (
     }
   }
 
+  // lift the bouquet off the bottom so it sits in the middle of the screen
   .flowers {
-    transform: scale(0.82);
+    transform: translateY(-15vh) scale(0.82);
     transform-origin: bottom center;
   }
 

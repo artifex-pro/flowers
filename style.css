@@ -1141,7 +1141,7 @@ body {
     display: none;
   }
   .flowers {
-    transform: scale(0.82);
+    transform: translateY(-15vh) scale(0.82);
     transform-origin: bottom center;
   }
   body {
