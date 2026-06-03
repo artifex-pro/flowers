@@ -1086,6 +1086,11 @@ body {
   animation-delay: 2.15s;
 }
 
+.flower--6,
+.flower--7 {
+  z-index: 120;
+}
+
 .greeting {
   position: fixed;
   top: 4vh;

@@ -1414,6 +1414,13 @@ $roses: (
   }
 }
 
+// pull the low side roses in front of the dark blurred foliage
+// so they don't look washed-out / ghostly
+.flower--6,
+.flower--7 {
+  z-index: 120;
+}
+
 // ---- greeting / love note ----
 .greeting {
   position: fixed;
