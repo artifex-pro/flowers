@@ -63,7 +63,7 @@ body {
   position: absolute;
   bottom: 10vmin;
   transform-origin: bottom center;
-  z-index: 10;
+  z-index: 110; // keep blooms in front of the dark blurred foliage (z 100)
 
   --fl-speed: 0.8s;
 
@@ -1391,10 +1391,10 @@ body {
 
 // ---- extra roses (4..10) fanning from the basket ----
 $roses: (
-  4: (rot: -34deg, h: 50, sc: 0.9, sd: 0.7s, ld: 1.9s),
-  5: (rot: 34deg, h: 52, sc: 0.9, sd: 0.8s, ld: 2s),
-  6: (rot: -50deg, h: 40, sc: 0.74, sd: 0.5s, ld: 1.7s),
-  7: (rot: 50deg, h: 42, sc: 0.74, sd: 0.6s, ld: 1.75s),
+  4: (rot: -24deg, h: 52, sc: 0.9, sd: 0.7s, ld: 1.9s),
+  5: (rot: 26deg, h: 52, sc: 0.9, sd: 0.8s, ld: 2s),
+  6: (rot: -18deg, h: 46, sc: 0.74, sd: 0.5s, ld: 1.7s),
+  7: (rot: 34deg, h: 44, sc: 0.74, sd: 0.6s, ld: 1.75s),
   8: (rot: 12deg, h: 64, sc: 0.94, sd: 1s, ld: 2.2s),
   9: (rot: -20deg, h: 58, sc: 0.9, sd: 0.9s, ld: 2.1s),
   10: (rot: 27deg, h: 60, sc: 0.88, sd: 0.95s, ld: 2.15s),
@@ -1403,7 +1403,7 @@ $roses: (
   .flower--#{$n} {
     left: 50%;
     transform: rotate(map.get($p, rot)) scale(map.get($p, sc));
-    z-index: 9;
+    z-index: 110;
     .flower__line {
       height: #{map.get($p, h)}vmin;
       animation-delay: map.get($p, sd);
@@ -1461,7 +1461,7 @@ $roses: (
 // mobile: let the note wrap, keep the bouquet clearly below the title
 @media (max-width: 600px) {
   .greeting {
-    top: 2.4vh;
+    top: 6vh;
     width: 100%;
     padding: 0 22px;
     box-sizing: border-box;
@@ -1503,10 +1503,10 @@ $roses: (
 
 // ---- top-left + central-gap fill (21..23) ----
 $fill-roses: (
-  21: (rot: -38deg, h: 88, sc: 0.84, sd: 0.95s, ld: 2.1s, z: 9),
+  21: (rot: -30deg, h: 86, sc: 0.84, sd: 0.95s, ld: 2.1s, z: 110),
   22: (rot: -16deg, h: 55, sc: 0.62, sd: 1.05s, ld: 2.32s, z: 130),
   23: (rot: 5deg, h: 50, sc: 0.58, sd: 1.1s, ld: 2.36s, z: 135),
-  24: (rot: -28deg, h: 78, sc: 0.8, sd: 1s, ld: 2.15s, z: 8),
+  24: (rot: -21deg, h: 78, sc: 0.8, sd: 1s, ld: 2.15s, z: 110),
 );
 @each $n, $p in $fill-roses {
   .flower--#{$n} {
@@ -1525,9 +1525,9 @@ $fill-roses: (
 
 // ---- extra fill roses (16..20), mostly pink ----
 $more-roses: (
-  16: (rot: -29deg, h: 56, sc: 0.8, sd: 0.85s, ld: 2.05s, z: 9),
-  17: (rot: 41deg, h: 54, sc: 0.76, sd: 0.9s, ld: 2.1s, z: 9),
-  18: (rot: 6deg, h: 69, sc: 0.82, sd: 1s, ld: 2.15s, z: 9),
+  16: (rot: -21deg, h: 56, sc: 0.8, sd: 0.85s, ld: 2.05s, z: 110),
+  17: (rot: 31deg, h: 54, sc: 0.76, sd: 0.9s, ld: 2.1s, z: 110),
+  18: (rot: 6deg, h: 69, sc: 0.82, sd: 1s, ld: 2.15s, z: 110),
   19: (rot: -8deg, h: 46, sc: 0.6, sd: 1.05s, ld: 2.3s, z: 140),
   20: (rot: 22deg, h: 50, sc: 0.66, sd: 1.1s, ld: 2.28s, z: 140),
 );
